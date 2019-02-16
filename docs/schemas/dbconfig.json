@@ -1,0 +1,66 @@
+{
+  "$id": "https://github.com/uzuna/vscode-with-yamllsp",
+  "$schema": "https://github.com/uzuna/vscode-with-yamllsp/schema",
+  "description": "DataBase configure",
+  "type": "object",
+  "required": [
+    "name",
+    "driver",
+    "host",
+    "user",
+    "pass",
+    "tz"
+  ],
+  "properties": {
+    "name": {
+      "description": "The unique identifier for a config",
+      "type": "string"
+    },
+    "driver": {
+      "description": "The driver name of golang sql driver lib",
+      "type": "string",
+      "default": "mysql",
+      "enum": [
+        "mysql",
+        "goracle",
+        "sqlserver"
+      ]
+    },
+    "host": {
+      "description": "The name of DataBase and port",
+      "type": "string",
+      "examples": [
+        "localhost:3306"
+      ],
+      "pattern": "^[a-zA-Z\\.\\-\\_]+(\\:\\d{1,5})?$",
+      "format": "hostname"
+    },
+    "user": {
+      "description": "The name of account for connect to DataBase",
+      "type": "string"
+    },
+    "pass": {
+      "description": "The password of account for connect to DataBase",
+      "type": "string"
+    },
+    "database": {
+      "description": "Default open database. Enabled when use  mysql",
+      "type": "string"
+    },
+    "tz": {
+      "description": "Set DataBase timzone. It is to use to add the offset for datetime- like column without timezone",
+      "type": "string",
+      "default": "UTC",
+      "examples": [
+        "UTC",
+        "Asia/Tokyo"
+      ]
+    },
+    "max_conn": {
+      "description": "Max Open connections. It is likely the number of max concurrency of sql execute. when 0 then no limit",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    }
+  }
+}
