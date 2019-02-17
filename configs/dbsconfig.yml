@@ -1,0 +1,11 @@
+databases:
+  - name: test
+    driver: mysql
+    host: localhost:3306
+    user: guest
+    pass: <password>
+    tz: UTC
+    max_conn: 1
+  - name: sss
+    driver: mysql
+    database: sss
