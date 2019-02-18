@@ -1,6 +1,6 @@
 {
-  "$id": "https://github.com/uzuna/vscode-with-yamllsp",
-  "$schema": "https://github.com/uzuna/vscode-with-yamllsp/schema",
+  "$id": "https://github.com/uzuna//vscode-yaml-suggestion",
+  "$schema": "https://github.com/uzuna//vscode-yaml-suggestion/schema",
   "description": "DataBase configure",
   "type": "object",
   "required": [

@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "host": "localhost:3306",
+  "driver": "mysql",
+  "user": "guest",
+  "pass": "<password>",
+  "tz": "UTC",
+  "max_conn": 1
+}

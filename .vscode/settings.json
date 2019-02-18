@@ -4,7 +4,27 @@
   "yaml.validate": true,
   "yaml.hover": true,
   "yaml.schemas": {
-    "./docs/schemas/dbconfig.json": ["*dbconfig.yaml", "*dbconfig.yml"],
-    "./docs/schemas/dbsconfig.json": ["*dbsconfig.yaml", "*dbsconfig.yml"],
+    "./docs/schemas/dbconfig.json": [
+      "*dbconfig.yaml",
+      "*dbconfig.yml"
+    ],
+    "./docs/schemas/dbsconfig.json": [
+      "*dbsconfig.yaml",
+      "*dbsconfig.yml"
+    ],
   },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "*dbconfig.json"
+      ],
+      "url": "./docs/schemas/dbconfig.json"
+    },
+    {
+      "fileMatch": [
+        "*dbsconfig.json"
+      ],
+      "url": "./docs/schemas/dbsconfig.json"
+    }
+  ]
 }
